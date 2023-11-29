@@ -28,11 +28,7 @@ fastify.post('/data', (req, reply) => {
   })
 })
 
-fastify.kafka.subscribe('updates')
-fastify.kafka.consumer.consumer.on('updates', async (msg) => {
-  console.log(msg.value.toString())
-  fastify.kafka.consumer.consumer.commit(msg)
-})
+fastify.register(require("./consumer"))
 
 fastify.listen({ port: 3000 }, err => {
   if (err) throw err
