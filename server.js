@@ -26,6 +26,7 @@ fastify.post('/data', (req, reply) => {
     payload: req.body,
     key: 'dataKey'
   })
+  return "ok"
 })
 
 fastify.register(require("./consumer"))
