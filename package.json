@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@fastify/kafka": "^2.2.1",
+    "fastify": "^4.24.3"
+  }
+}
